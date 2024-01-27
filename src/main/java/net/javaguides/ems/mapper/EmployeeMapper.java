@@ -22,4 +22,13 @@ public class EmployeeMapper {
                 employeeDto.getEmail()
         );
     }
+
+    public static Employee matToUpdatedEmployee(Employee foundEmployee, EmployeeDto updatedEmployee) {
+        foundEmployee.setId(updatedEmployee.getId());
+        foundEmployee.setFirstName(updatedEmployee.getFirstName());
+        foundEmployee.setLastName(updatedEmployee.getLastName());
+        foundEmployee.setEmail(updatedEmployee.getEmail());
+
+        return foundEmployee;
+    }
 }
